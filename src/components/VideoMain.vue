@@ -1,6 +1,6 @@
 <template>
-  <div class="border border-warning m-3">
-    <h1>VIDEO MAIN</h1>
+  <div class="m-3">
+    <!-- <h1>VIDEO MAIN</h1> -->
     <iframe
       v-if="videoMain"
       id='player'
@@ -10,12 +10,19 @@
       :src="'http://www.youtube.com/embed/'+videoMain.id.videoId"
       frameBorder='0'
     />
+    <!-- <div>hi</div> -->
+    <img 
+      v-if="!videoMain"
+      src="../assets/wtf.png" alt=""
+      width='75%'
+      height='750px'
+    >
     <!-- {{ videoMain }} -->
   </div>
 </template>
 
 <script>
-
+// :src="'http://www.youtube.com/embed/'+videoMain.id.videoId"
 export default {
   name: 'VideoMain',
   computed: {

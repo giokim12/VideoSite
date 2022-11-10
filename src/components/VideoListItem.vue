@@ -1,9 +1,9 @@
 <template>
   <div 
-    class="border m-3"
+    class = "mb-3 overflow-hidden recommended-videos"
     @click="changeMain"
   >
-    <img :src="video.snippet.thumbnails.default.url" alt="">
+    <img :src="video.snippet.thumbnails.default.url" alt="" class="rounded">
     {{ video.snippet.title }}
   </div>
 </template>
@@ -28,5 +28,7 @@ export default {
 </script>
 
 <style>
-
+.recommended-videos {
+  display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis;
+}
 </style>

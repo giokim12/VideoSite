@@ -1,14 +1,16 @@
 <template>
-  <div class="border border-success m-3">
+  <div class=" m-3">
     <div>
-        <div class="searchbar">
-        <img alt="Vue logo" src="./assets/logo.png">
+      <div class="d-flex justify-content-center m-3 searchbar">
+        <img class="mr-3 gios-face" alt="Vue logo" src="./assets/jiofeelsogood.gif" width="40" height="60">
         <h1>VueTube</h1>
-        <SearchBar/>
       </div>
-      <div class="row">
-        <VideoMain class="col-6 col-lg-8"/>
-        <VideoList class="col-6 col-lg-3"/>
+      <div>
+        <SearchBar class="d-flex justify-content-center col-lg-8"/>
+      </div>
+      <div class="row m-3">
+        <VideoMain class="col-lg-8"/>
+        <VideoList class="col-lg-3"/>
       </div>
     </div>
   </div>
