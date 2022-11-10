@@ -6,18 +6,18 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     videoList: [],
-    videoMain: [],
+    videoMain: null,
     searchTitle: null,
   },
   getters: {
     mainVideo(state) {
-      return state.videoMain[0];
+      return state.videoMain;
     },
   },
   mutations: {
     VIDEO_PUSH(state, videoItem) {
       state.videoList = videoItem;
-      state.videoMain = videoItem;
+      state.videoMain = videoItem[0];
       return state;
     },
     SEARCH_TITLE_METHOD(state, searchItem) {
@@ -26,11 +26,11 @@ export default new Vuex.Store({
       return searchItem;
     },
     CHANGE_MAIN(state, changeMain) {
-      console.log(state.videoMain)
-      state.videoMain = changeMain.snippet;
-      console.log(state.videoMain)
-      return changeMain;
-    }
+      console.log(state.videoMain[0]);
+      state.videoMain = changeMain;
+      console.log(state.videoMain[0]);
+      return state;
+    },
   },
   actions: {
     videoPush(context, response) {
@@ -40,8 +40,8 @@ export default new Vuex.Store({
       context.commit("SEARCH_TITLE_METHOD", searchTitle);
     },
     changeMain(context, changeMain) {
-      context.commit("CHANGE_MAIN", changeMain)
-    }
+      context.commit("CHANGE_MAIN", changeMain);
+    },
   },
   modules: {},
 });
