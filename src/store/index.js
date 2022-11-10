@@ -6,8 +6,13 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     videoList: [],
+    videoMain: [],
   },
-  getters: {},
+  getters: {
+    mainVideo (state) {
+      return state.videoList[0]
+    }
+  },
   mutations: {
     VIDEO_PUSH(state, videoItem) {
       state.videoList = videoItem;
