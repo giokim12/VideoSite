@@ -3,6 +3,7 @@
     <div class="searchbar">
       <img alt="Vue logo" src="./assets/logo.png">
       <h1>VueTube</h1>
+      <SearchBar/>
     </div>
     <div>
       <div>
@@ -17,6 +18,7 @@
 </template>
 
 <script>
+import SearchBar from '@/components/SearchBar'
 import VideoMain from '@/components/VideoMain'
 import VideoList from '@/components/VideoList'
 
@@ -25,7 +27,7 @@ export default {
   components: {
     VideoMain,
     VideoList,
-    
+    SearchBar
   }
 }
 </script>
