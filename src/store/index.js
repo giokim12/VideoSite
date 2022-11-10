@@ -10,26 +10,26 @@ export default new Vuex.Store({
     searchTitle: null,
   },
   getters: {
-    mainVideo(state) {
-      return state.videoMain;
-    },
+    // mainVideo(state) {
+    //   return state.videoMain;
+    // },
   },
   mutations: {
     VIDEO_PUSH(state, videoItem) {
       state.videoList = videoItem;
       state.videoMain = videoItem[0];
-      return state;
+      // return state;
     },
     SEARCH_TITLE_METHOD(state, searchItem) {
       state.searchTitle = searchItem;
       // console.log(searchItem);
-      return searchItem;
+      // return searchItem;
     },
     CHANGE_MAIN(state, changeMain) {
       console.log(state.videoMain[0]);
       state.videoMain = changeMain;
       console.log(state.videoMain[0]);
-      return state;
+      // return state;
     },
   },
   actions: {

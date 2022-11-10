@@ -4,7 +4,21 @@
     @click="changeMain"
   >
     <img :src="video.snippet.thumbnails.default.url" alt="" class="rounded">
-    {{ video.snippet.title }}
+    <div>
+      <div class="font-weight-bold ml-2">
+        {{ video.snippet.title }}
+      </div>
+      
+      <br>
+      <div class ="d-flex ml-2" >
+      채널명:   
+        <div class="font-weight-light">
+          {{ video.snippet.channelTitle }}
+        <!-- {{ video.snippet.channelTitle }} -->
+        </div>
+      </div>
+    </div>
+    
   </div>
 </template>
 
@@ -19,7 +33,7 @@ export default {
   },
   methods: {
     changeMain() {
-      console.log(this.video)
+      // console.log(this.video)
       this.$store.dispatch('changeMain', this.video)
     }
   },
@@ -29,6 +43,11 @@ export default {
 
 <style>
 .recommended-videos {
-  display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis;
+  display:-webkit-box; 
+  word-wrap:break-word; 
+  -webkit-line-clamp:1; 
+  /* -webkit-box-orient:vertical;  */
+  overflow:hidden; 
+  text-overflow:ellipsis;
 }
 </style>

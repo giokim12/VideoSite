@@ -39,7 +39,7 @@ export default {
   methods: {
     getVideoList() {
       let URL = `https://www.googleapis.com/youtube/v3/search`
-      const API_KEY = 'AIzaSyBmdy_t2Hfynr5ptIqHKFYe3OApPn6ID6c'
+      const API_KEY = 'AIzaSyB1iUyONDiUkQt3nMDN4T9pcxuOi4BXw-0'
       let params = {
         key: API_KEY,
         type: 'video',
@@ -47,6 +47,7 @@ export default {
         q: this.searchTitle,
         maxResults: 20,
       }
+      // then: 성공하면 수행할 로직, catch: 실패하면 수행할 로직
       axios.get(URL, { params })
         .then((response) => {
           // console.log(response.data.items)

@@ -18,7 +18,7 @@
       height='750px'
     >
     <!-- {{ videoMain }} -->
-  </div>
+  </div> 
 </template>
 
 <script>
@@ -28,7 +28,7 @@ export default {
   computed: {
     videoMain() {
       // console.log(this.$store.getters.mainVideo)
-      return this.$store.getters.mainVideo
+      return this.$store.state.videoMain
     }
   }
 }
