@@ -1,16 +1,14 @@
 <template>
   <div class="border border-success m-3">
-    <div class="searchbar">
-      <img alt="Vue logo" src="./assets/logo.png">
-      <h1>VueTube</h1>
-      <SearchBar/>
-    </div>
     <div>
-      <div>
-        <VideoMain/>
+        <div class="searchbar">
+        <img alt="Vue logo" src="./assets/logo.png">
+        <h1>VueTube</h1>
+        <SearchBar/>
       </div>
-      <div>
-        <VideoList/>
+      <div class="row">
+        <VideoMain class="col-6 col-lg-8"/>
+        <VideoList class="col-6 col-lg-3"/>
       </div>
     </div>
   </div>
