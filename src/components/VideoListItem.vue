@@ -1,5 +1,8 @@
 <template>
-  <div class="border m-3">
+  <div 
+    class="border m-3"
+    @click="changeMain"
+  >
     <img :src="video.snippet.thumbnails.default.url" alt="">
     {{ video.snippet.title }}
   </div>
@@ -13,7 +16,14 @@ export default {
   },
   created() {
     console.log(this.video.snippet)
-  }
+  },
+  methods: {
+    changeMain() {
+      console.log(this.video)
+      this.$store.dispatch('changeMain', this.video)
+    }
+  },
+
 }
 </script>
 

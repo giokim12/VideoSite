@@ -4,6 +4,7 @@
     <input 
       type="text" 
       v-model="searchTitle"
+      @keyup.enter="getVideoList"
     >
     <button 
       class="btn btn-danger"
@@ -36,7 +37,7 @@ export default {
       }
       axios.get(URL, { params })
         .then((response) => {
-          console.log(response.data.items)
+          // console.log(response.data.items)
           this.$store.dispatch('videoPush', response.data.items)
         })
         .catch((error) => {

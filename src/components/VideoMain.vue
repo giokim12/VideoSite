@@ -20,7 +20,7 @@ export default {
   name: 'VideoMain',
   computed: {
     videoMain() {
-      console.log(this.$store.getters.mainVideo)
+      // console.log(this.$store.getters.mainVideo)
       return this.$store.getters.mainVideo
     }
   }
