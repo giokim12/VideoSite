@@ -2,6 +2,7 @@
   <div class="border border-warning m-3">
     <h1>VIDEO MAIN</h1>
     <iframe
+      v-if="videoMain"
       id='player'
       type='text/html'
       width='100%'
